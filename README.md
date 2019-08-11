@@ -116,13 +116,13 @@ Login to your newly installed node as "root".
 Enter this command to copy the Masternode installation script and install a single Helium Masternode:
 
 ```bash
-git clone https://github.com/yoshiekiura/vps.git && cd vps && ./install.sh -p helium
+git clone https://github.com/yoshiekiura/vps.git && cd vps && ./install.sh -p futurexco
 ```
 
 If you have your masternode private key, please use this (you can generate masternode private key with Step 2 below).
 
 ```bash
-git clone https://github.com/yoshiekiura/vps.git && cd vps && ./install.sh -p helium -k **PRIVATE KEY**
+git clone https://github.com/yoshiekiura/vps.git && cd vps && ./install.sh -p futurexco -k **PRIVATE KEY**
 ```
 Replace ```**PRIVATE KEY**``` with your own masternode privkey.
 Using this command, you can skip "Configure masternode configuration files" below, because the command abopve adds the masternode private key to the masternode configuration files.
@@ -131,25 +131,25 @@ This prepares the system and installs the Helium Masternode daemon. This include
 
 <img src="docs/images/masternode_vps/install.png" alt="VPS configuration" class="inline"/>
 
-While that is underway, go back to your local desktop and open helium-qt.
+While that is underway, go back to your local desktop and open futurexco-qt.
 
 ### Multiple Masternodes on one VPS (ignore if you are installing a single masternode on a new VPS)
 
 If you wish to install more than one masternode on the same VPS, you can add a -c parameter to tell the script how many to configure, so for example this would install three Helium masternodes (all entered on one line):
 
 ```bash
-git clone https://github.com/yoshiekiura/vps.git && cd vps && ./install.sh -p helium -c 3
+git clone https://github.com/yoshiekiura/vps.git && cd vps && ./install.sh -p futurexco -c 3
 ```
 
 If you already have your masternode private keys, you can add them as shown below (all entered on one line):
 
 ```bash
-git clone https://github.com/yoshiekiura/vps.git && cd vps && ./install.sh -p helium -c 3 --key **PRIVATE KEY 01** --key2 **PRIVATE KEY 02** --key3 **PRIVATE KEY 03**
+git clone https://github.com/yoshiekiura/vps.git && cd vps && ./install.sh -p futurexco -c 3 --key **PRIVATE KEY 01** --key2 **PRIVATE KEY 02** --key3 **PRIVATE KEY 03**
 ```
 Replace every `**PRIVATE KEY 01**` etc entry by your masternode privkey. So
 
 ```bash
-git clone https://github.com/yoshiekiura/vps.git && cd vps && ./install.sh -p helium -c 3 --key1 7QgVciKfm43fdRxQFLKYn76f3d78phUWRWajUfWGMMHUv5SuUt5 --key2 7RNz4BvxsadGYedHr5KTZ9Wha45gbEbmg9eaXuwXjwuNJZBPsJC --key3 7Qy9bPyZExu78fd5eowoGKxpu7ExvKzsFxjeaaNEXBPRsoYukN
+git clone https://github.com/yoshiekiura/vps.git && cd vps && ./install.sh -p futurexco -c 3 --key1 7QgVciKfm43fdRxQFLKYn76f3d78phUWRWajUfWGMMHUv5SuUt5 --key2 7RNz4BvxsadGYedHr5KTZ9Wha45gbEbmg9eaXuwXjwuNJZBPsJC --key3 7Qy9bPyZExu78fd5eowoGKxpu7ExvKzsFxjeaaNEXBPRsoYukN
 ```
 
 Using this command, you can skip the step for "Configure masternode configuration files", because the command above adds the masternode private keys to the masternode configuration files.
@@ -163,7 +163,7 @@ If you are upgrading your masternode(s) to a new release, you should first remov
 rm -rf /root/
 ```
 ```bash
-git clone https://github.com/yoshiekiura/vps.git && cd vps && ./install.sh -p helium -u
+git clone https://github.com/yoshiekiura/vps.git && cd vps && ./install.sh -p futurexco -u
 ```
 
 The project is configured to use the latest official release of the Helium masternode code, and we will update this project each time a new release is issued, but without downloading the latest version of this project and using the -u parameter, the script will not update an existing Helium node that is already installed.
@@ -180,7 +180,7 @@ Login to your VPS and run the Nodemaster script:
 cd vps
 ```
 ```bash
-sudo ./install.sh -p helium -c *
+sudo ./install.sh -p futurexco -c *
 ```
 
 Where `*`  is total number of masternode desired on the VPS. This adds folders and files to run new nodes. Running the script again doesn't touch the helium daemon or previous installed nodes.
